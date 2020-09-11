@@ -12,10 +12,11 @@ class Library {
     newBooks.forEach(book => this.books.push(book));
   }
   printInventory() {
-    this.books.forEach((book) => {
-      console.log(`${book.title} by ${book.author}`);
+    this.books.forEach(({title, author}) => {
+      console.log(`${title} by ${author}`);
     });
   }
 }
+
 
 export default Library;
